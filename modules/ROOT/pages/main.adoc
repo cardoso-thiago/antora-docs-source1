@@ -66,4 +66,7 @@ a|* Ainda pode gerar confusão para os clientes nos casos de versões ainda não
 https://github.com/asciidoctor/asciidoctor-extensions-lab/issues/9
 
 [NOTE.version,caption=Versão 1.5.0]
-Coisas que entraram ou entrarão na versão 1.5.0.
+====
+====
+
+Coisas que entraram ou irão entrar na versão 1.5.0. Podemos avaliar de customizar o admonition para ter um `alt` explicativo e para que seja um link fixo para o nosso calendário de versões.
