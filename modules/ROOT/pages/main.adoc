@@ -1,3 +1,59 @@
-= Página Principal Source 1
+= Soluções para controle da Documentação
 
-Página principal da doc source 1.
+[cols="1,1,1,1"]
+|===
+|*Solução*
+|*Descrição*
+|*Prós*
+|*Contras*
+
+|Lançamento das versões Milestone
+|Retornamos a publicar a documentação durante o lançamento das versões Milestone
+a|* Não modifica o nosso fluxo de trabalho no dia a dia
+* Documentação atualizada com mais velocidade do que o processo atual
+a|* Não resolve completamente o problema, visto que ainda teremos um intervalo de um mês para a atualização da documentação
+* Necessidade de revisão do fluxo de lançamento de versões (possível retorno do controle por tags)
+* Se o controle passar a ser por tags, ainda não está claro se esse controle é possível com o novo modelo de documentação (action de checkout do Github)
+
+|Controle por branch
+|Nesse processo, criamos uma branch com o que não pode entrar na versão e só faremos o merge quando lançarmos a documentação na versão release.
+a|* Documentação atualizada diariamente
+* Resolve de fato o problema
+a|* Teremos que ter um controle preciso sobre o que entra ou não nessa branch
+* Necessidade de equalização constante da branch com grandes possibilidades de necessidade de merge durante o período de 3 meses até o lançamento da versão
+* Incremento do processo de geração de versão release com a nova etapa de incorporação dessa branch
+
+|Controle por branch + Lançamento das versões Milestone
+|Nesse processo, criamos uma branch com o que não pode entrar na versão e faremos o merge quando lançarmos qualquer versão.
+a|* Documentação atualizada diariamente
+* Resolve de fato o problema
+a|* Teremos que ter um controle preciso sobre o que entra ou não nessa branch
+* Necessidade de equalização constante da branch com possibilidade de necessidade de merge durante o período de 1 mês até o lançamento da versão
+* Incremento do processo de geração de versão milestone e release com a nova etapa de incorporação dessa branch
+
+|Lançamento de versões da documentação por ambiente
+|Nesse processo, criamos repositórios apartados para a documentação, simulando os ambientes de desenvolvimento.
+a|* Não identificado
+a|* Não identificado como esse mecanismo endereçaria o problema
+* Esforço maior para a publicação da versão entre DEV, HOM e PROD
+* Endpoints de acesso a documentação diferentes por ambiente
+* Mudança completa no fluxo de publicação de documentação atual
+
+|Controle na codificação da documentação
+|Nesse processo, inserimos um condicional em trechos da documentação que não queremos que seja visualizado até que a flag seja atualizada no momento de geração de uma nova versão.
+a|* Documentação atualizada diariamente
+* Resolve de fato o problema
+a|* Não está claro se é possível implementar o mesmo mecanismo para a navegação
+* Incremento do processo de geração de versão release com a nova etapa de mudança da flag de versão para que o condicional seja aceito
+* Alteração no nosso fluxo de escrita de documentação no dia a dia, com a necessidade de inclusão da condição quando a alteração se referir a algo novo.
+
+|Controle informativo na documentação
+|Nesse processo, inserimos uma label com link para o nosso calendário de releases, informando que aquela funcionalidade estará disponível somente na versão especificada na label.
+a|* Documentação atualizada diariamente
+* Resolve de fato o problema
+* Pode servir como estímulo para a atualização da versão do QuickCloud, visto que as labels serão visíveis mesmo após o lançamento de versões superiores. Por exemplo, o cliente com a versão 1.4.0 identificando uma funcionalidade interessante para o seu escopo, mas que somente estará ou que já está disponível a partir da versão 1.5.0.
+a|* Ainda pode gerar confusão para os clientes nos casos de versões ainda não geradas
+* Alteração no nosso fluxo de escrita de documentação no dia a dia, com a necessidade de inclusão da label quando a alteração se referir a algo novo.
+* Pode deixar a documentação "poluída".
+
+|===
