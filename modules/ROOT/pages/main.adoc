@@ -38,6 +38,7 @@ a|* Não identificado como esse mecanismo endereçaria o problema
 * Esforço maior para a publicação da versão entre DEV, HOM e PROD
 * Endpoints de acesso a documentação diferentes por ambiente
 * Mudança completa no fluxo de publicação de documentação atual
+* Atualmente, necessidade de 6 repositórios adicionais para controle da documentação.
 
 |Controle na codificação da documentação
 |Nesse processo, inserimos um condicional em trechos da documentação que não queremos que seja visualizado até que a flag seja atualizada no momento de geração de uma nova versão.
@@ -46,6 +47,7 @@ a|* Documentação atualizada diariamente
 a|* Não está claro se é possível implementar o mesmo mecanismo para a navegação
 * Incremento do processo de geração de versão release com a nova etapa de mudança da flag de versão para que o condicional seja aceito
 * Alteração no nosso fluxo de escrita de documentação no dia a dia, com a necessidade de inclusão da condição quando a alteração se referir a algo novo.
+* O mecanismo teria que ser implementado no novo mecanismo de documentação.
 
 |Controle informativo na documentação
 |Nesse processo, inserimos uma label com link para o nosso calendário de releases, informando que aquela funcionalidade estará disponível somente na versão especificada na label.
@@ -55,5 +57,13 @@ a|* Documentação atualizada diariamente
 a|* Ainda pode gerar confusão para os clientes nos casos de versões ainda não geradas
 * Alteração no nosso fluxo de escrita de documentação no dia a dia, com a necessidade de inclusão da label quando a alteração se referir a algo novo.
 * Pode deixar a documentação "poluída".
+* Necessidade de implementação do estilo da label no tema atual do Antora e no novo mecanismo da documentação.
 
 |===
+
+== Criação de um novo tipo de admonition
+
+https://github.com/asciidoctor/asciidoctor-extensions-lab/issues/9
+
+[NOTE.version,caption=Versão 1.5.0]
+Coisas que entraram ou entrarão na versão 1.5.0.
